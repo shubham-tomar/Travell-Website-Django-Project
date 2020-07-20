@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello from home.html</h1>
+What's up {{Name}}
+
+<form action="addf" method="post">
+    {% csrf_token %}
+
+    Enter 1st number: <input type="text" name="n1"><br>
+    Enter 2nd number: <input type="text" name="n2"><br>
+    <input type="submit" value="add">
+
+</form>
+
+
+
+</body>
+
+</html>
+{% endblock %}
